@@ -4,3 +4,4 @@ static/webfonts
 shorturl*
 static/js/v3/*.min.js
 __pycache__
+static/all.css
