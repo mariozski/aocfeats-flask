@@ -6,7 +6,5 @@ aocfeats in python using Flask framework
 required modules
 ================
 
-Flask
-Flask-Assets
-pyscss
+Flask, Flask-Assets, pyscss
 
