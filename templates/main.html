@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-language" content="en-EN">
+		<meta charset="UTF-8">
+        {% assets 'stylesheets' %}
+        <link rel=stylesheet type=text/css href="{{ ASSET_URL }}">
+        {% endassets %}
+        <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='icons/style.css') }}" />
+        <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+        <link rel="stylesheet" type="text/css" href="https://s3-eu-west-1.amazonaws.com/assets.cookieconsent.silktide.com/current/style.min.css"/>
+        <script type="text/javascript" src="https://s3-eu-west-1.amazonaws.com/assets.cookieconsent.silktide.com/current/plugin.min.js"></script>
+        <script type="text/javascript">
+        // <![CDATA[
+        cc.initialise({
+            cookies: {
+                    analytics: {},
+                    necessary: {}},
+            settings: {
+                    consenttype: "implicit",
+                    tagPosition: "vertical-left",
+                    onlyshowbanneronce: true,
+                    disableallsites: true,
+                    useSSL: true }
+        });
+        // ]]>
+        </script>
+        <!-- End Cookie Consent plugin -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.0/dojo/dojo.js"></script>
+        <title>Age of Conan Feat Planner</title>
+    	<meta name="Description" content="Age of Conan game feat planner." />
+    </head>
+    <body>
+<h1>Welcome on Age of Conan | AoC | Feat Planner | Calculator!</h1>
+
+		{% block content %}
+        {% endblock %}
+        <nav>
+            <div>
+                <span id="import-base">{{ url_for('import_build', key='') }}</span>
+                <ul class='menu soins-roman'>
+                    <li class="aocfeats soins-head">aocfeats.com</li>
+                    <li class="menu-item">Priest<span>&nbsp;▼</span>
+                        <ul>
+                            <li>
+                                <div class="pom-small"></div>
+                                <a href="{{ url_for('feat', class_name='pom') }}">Priest of Mitra</a>
+                            </li>
+                            <li>
+                                <div class="tos-small"></div>
+                                <a href="{{ url_for('feat', class_name='tos') }}">Tempest of Set</a>
+                            </li>
+                            <li>
+                                <div class="bs-small"></div>
+                                <a href="{{ url_for('feat', class_name='bs') }}">Bear Shaman</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Soldier<span>&nbsp;▼</span>
+                        <ul>
+                            <li>
+                                <div class="conq-small"></div>
+                                <a href="{{ url_for('feat', class_name='conq') }}">Conqueror</a>
+                            </li>
+                            <li>
+                                <div class="dt-small"></div>
+                                <a href="{{ url_for('feat', class_name='dt') }}">Dark Templar</a>
+                            </li>
+                            <li>
+                                <div class="guard-small"></div>
+                                <a href="{{ url_for('feat', class_name='guard') }}">Guardian</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Rogue<span>&nbsp;▼</span>
+                        <ul>
+                            <li>
+                                <div class="sin-small"></div>
+                                <a href="{{ url_for('feat', class_name='sin') }}">Assassin</a>
+                            </li>
+                            <li>
+                                <div class="barb-small"></div>
+                                <a href="{{ url_for('feat', class_name='barb') }}">Barbarian</a>
+                            </li>
+                            <li>
+                                <div class="rgr-small"></div>
+                                <a href="{{ url_for('feat', class_name='rgr') }}">Ranger</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Mage<span>&nbsp;▼</span>
+                        <ul>
+                            <li>
+                                <div class="necro-small"></div>
+                                <a href="{{ url_for('feat', class_name='necro') }}">Necromancer</a>
+                            </li>
+                            <li>
+                                <div class="demo-small"></div>
+                                <a href="{{ url_for('feat', class_name='demo') }}">Demonologist</a>
+                            </li>
+                            <li>
+                                <div class="hox-small"></div>
+                                <a href="{{ url_for('feat', class_name='hox') }}">Herald of Xotli</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+			</div>
+        </nav>
+		<footer>
+            <p><a href="{{ url_for('contact') }}">Contact</a></p>
+        </footer>
+        <div id="background"></div>
+    </body>
+    <script type="text/javascript">
+        {# (function () {
+            require(["dojo/fx/easing", "dojo/_base/fx", "dojo/on","dojo/request/xhr", "dojo/domReady!"],
+            function(easing, baseFx, on, xhr) {
+                var count = 18,
+                    number = Math.floor((Math.random()*count)+1) % (count+1),
+                    body = document.body,
+                    html = document.documentElement,
+                    height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight),
+                    back = document.getElementById('background');
+
+                var setBackground = function () {
+                    height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+                    back.style.height = height + 'px';
+                }
+
+                on(window, 'resize', function() {
+                    setBackground();
+                });
+
+                setBackground();
+                var image = '@routes.Assets.at("/static/images/back_")' + number.toString() + ".jpg";
+                xhr(image, {
+                    handleAs:"text"
+                }).then(
+                    function() {
+                        back.style.backgroundImage = "url(" + image + ")";
+                        baseFx.animateProperty({
+                        node: back,
+                        duration: 500,
+                        properties: {
+                        opacity: {
+                        begin: 0,
+                        end: 1
+                        }
+                        },
+                        easing: easing.linear
+                        }).play();
+                })
+            });
+        })();          #}
+        (function(){require(["dojo/fx/easing","dojo/_base/fx","dojo/on","dojo/request/xhr","dojo/domReady!"],function(a,b,c,d){var e=18,f=Math.floor(Math.random()*e+1)%(e+1),g=document.body,h=document.documentElement,i=Math.max(g.scrollHeight,g.offsetHeight,h.clientHeight,h.scrollHeight,h.offsetHeight),j=document.getElementById("background"),k=function(){i=Math.max(g.scrollHeight,g.offsetHeight,h.clientHeight,h.scrollHeight,h.offsetHeight),j.style.height=i+"px"};c(window,"resize",function(){k()}),k();var l="{{ url_for('static', filename='images/back_') }}"+(""+f)+".jpg";d(l,{handleAs:"text"}).then(function(){j.style.backgroundImage="url("+l+")",b.animateProperty({node:j,duration:500,properties:{opacity:{begin:0,end:1}},easing:a.linear}).play()})})})();
+        </script>
+    <script type="text/plain" class="cc-onconsent-analytics">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-34900918-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+        <!-- UserVoice JavaScript SDK (only needed once on a page) -->
+    <script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/PL88yFSlxTBtiHwD40KBg.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
+
+        <!-- A tab to launch the Classic Widget -->
+    <script>
+    UserVoice = window.UserVoice || [];
+    UserVoice.push(['showTab', 'classic_widget', {
+    mode: 'full',
+    primary_color: '#cc6d00',
+    link_color: '#007dbf',
+    default_mode: 'feedback',
+    forum_id: 177024,
+    tab_label: 'Feedback & Help',
+    tab_color: '#cc6d00',
+    tab_position: 'middle-right',
+    tab_inverted: false
+    }]);
+    </script>
+</html>

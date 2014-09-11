@@ -1,0 +1,419 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/ZeroClipboard.min.js') }}"></script>
+<div id="feat-planner-container">
+	<div id="feat-planner">
+        <div id="link-tip">
+            <span id="flash"></span></div>
+        <div id="link-container">
+
+            <span id="link-id">@model.characterClassId</span>
+            <div id="switch-parent">
+            <label class="checkbox toggle candy soins-roman" onclick="">
+                <input id="view" type="checkbox" checked />
+                <p><span>Key</span><span>URL</span></p>
+                <a class="slide-button"></a>
+            </label>
+            </div>
+            <div id="link-parent">
+                <input type="hidden" id="link-hidden" />
+                <input type="text" class="soins-light" id="link" />
+                <div id="copykey" class="icon-white icon-share"></div>
+            </div>
+            <button id="load" class="btn candy">Import</button>
+        </div>
+        <div class="feat-panel">
+        <div class="feat-background">
+		<div class="feat-tree">
+		<table class="unselectable">
+			<tr>
+				<th colspan="5" class="soins-light" desc><span id="tree1name"></span>&nbsp;<span id="tree1" class="digital">0</span></th>
+                <th id="clear-tree1">X</th>
+			</tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell" colspan="2"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+		</table>
+		</div>
+		<div class="feat-tree">
+		<table class="unselectable">
+		    <tr>
+			 <th colspan="5" class="soins-light" desc><span id="tree2name"></span>&nbsp;<span id="tree2" class="digital">0</span></th>
+             <th id="clear-tree2">X</th>
+			</tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell" colspan="2"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+		</table>
+		</div>
+		<div class="feat-tree">
+		<table class="unselectable">
+		<tr>
+				<th colspan="5" class="soins-light" desc>General&nbsp;<span id="tree3" class="digital">0</span></th>
+                <th id="clear-tree3">X</th>
+			</tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell" colspan="2"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+            <tr>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+                <td class="feat-cell"><div class="fh-container"><div class="fh"></div></div></td>
+            </tr>
+		</table>
+		</div>
+            <div class="clearfix"></div>
+            <div class="feat-tree-footer">
+                <span>Used </span><span id="used-points" class="digital">0</span>&nbsp;points
+                <span id="available-points" class="digital">79</span><span>&nbsp;to go...</span>
+                <button id="clear-button" class="ico-remove tooltip" title="Reset feats"></button>
+            </div>
+
+        </div>
+        </div>
+	</div>
+</div>
+<script type="text/javascript">
+var jsFiles = { "pom" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/priestofmitra.js') }}",
+                        "{{ url_for('static', filename='js/v3/priest_general.js') }}"
+                    ],
+                    "images": ["pom.png", "priest_general.png"]
+                },
+                "tos" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/tempestofset.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/priest_general.min.js') }}"
+                    ],
+                    "images": ["tos.png", "priest_general.png"]
+                },
+                "bs" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/bearshaman.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/priest_general.min.js') }}"
+                    ],
+                    "images": ["bs.png", "priest_general.png"]
+                },
+                "sin" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/assasin.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/rogue_general.min.js') }}"
+                    ],
+                    "images": ["sin.png", "rogue_general.png"]
+                },
+                "rgr" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/ranger.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/rogue_general.min.js') }}"
+                    ],
+                    "images": ["ranger.png", "rogue_general.png"]
+                },
+                "barb" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/barbarian.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/rogue_general.min.js') }}"
+                    ],
+                    "images": ["barb.png", "rogue_general.png"]
+                },
+                "dt" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/darktemplar.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/soldier_general.min.js') }}"
+                    ],
+                    "images": ["dt.png", "soldier_general.png"]
+                },
+                "guard" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/guardian.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/soldier_general.min.js') }}"
+                    ],
+                    "images": ["guard.png", "soldier_general.png"]
+                },
+                "conq" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/conqueror.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/soldier_general.min.js') }}"
+                    ],
+                    "images": ["conq.png", "soldier_general.png"]
+                },
+                "demo" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/demonologist.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/mage_general.min.js') }}"
+                    ],
+                    "images": ["demo.png", "mage_general.png"]
+                },
+                "necro" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/necromancer.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/mage_general.min.js') }}"
+                    ],
+                    "images": ["necro.png", "mage_general.png"]
+                },
+                "hox" : {
+                    "js": [
+                        "{{ url_for('static', filename='js/v3/heraldofxotli.min.js') }}",
+                        "{{ url_for('static', filename='js/v3/mage_general.min.js') }}"
+                    ],
+                    "images": ["hox.png", "mage_general.png"]
+                }};
+
+var charClass = window.location.pathname.split('/')[2];
+
+require(["{{ url_for('static', filename='js/v3/FeatPlanner.min.js') }}",
+         jsFiles[charClass].js[0],
+         jsFiles[charClass].js[1],
+        'dojo/domReady!'],
+function(FeatPlanner,
+        classFeats,
+        generalFeats,
+        dom) {
+
+    var settings = {};
+    settings.classTree = '{{ url_for('static', filename='images/') }}' + jsFiles[charClass].images[0];
+    settings.generalTree = '{{ url_for('static', filename='images/') }}' + jsFiles[charClass].images[1];
+    settings.link = window.location.pathname.split('/')[3] || "";
+    settings.shorten = '{{ url_for('shorten') }}';
+    settings.zeroClipboardPath ='{{ url_for('static', filename='ZeroClipboard.swf') }}';
+    settings.classFeats = classFeats;
+    settings.generalFeats = generalFeats;
+
+    var initFeatPlanner = function () {
+        if (typeof FeatPlanner === 'undefined') {
+            setTimeout(initFeatPlanner, 10);
+        } else {
+            var fp = new FeatPlanner(settings);
+            fp(true);
+        }
+    };
+
+    initFeatPlanner();
+});
+
+</script>
+{% endblock %}

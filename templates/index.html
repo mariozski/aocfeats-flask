@@ -1,0 +1,87 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="container">
+<div class="inner-container">
+    {#
+    <div id="logo">
+    </div> #}
+    <div class="soins-head sharperGlow" style="font-size: 64px; color:rgb(97, 6, 6);">age of conan</div>
+    <div class="soins-head sharperGlow" style="letter-spacing: 1.2em;padding-bottom: 40px; color:rgb(97, 6, 6);">feat&nbsp;&nbsp;&nbsp;planner</div>
+    <div>
+        <div class="class-group">
+            <div class="group-name soins-head inset">
+                healer
+            </div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name pom icon sharperGlow">
+                <a href="{{ url_for('feat', class_name='pom') }}">Priest of Mitra</a>
+            </div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name tos icon sharperGlow">
+                <a href="{{ url_for('feat', class_name='tos') }}">Tempest of Set</a>
+            </div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name bs icon sharperGlow">
+                <a href="{{ url_for('feat', class_name='bs') }}">Bear Shaman</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="class-group">
+            <div class="group-name soins-head inset">Soldier</div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name conq icon sharperGlow">
+                 <a href="{{ url_for('feat', class_name='conq') }}">Conqueror</a>
+            </div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name dt icon sharperGlow">
+                <a href="{{ url_for('feat', class_name='dt') }}">Dark Templar</a>
+            </div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name guard icon sharperGlow">
+                <a href="{{ url_for('feat', class_name='guard') }}">Guardian</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="class-group">
+            <div class="group-name soins-head inset">Rogue</div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name sin icon sharperGlow">
+                 <a href="{{ url_for('feat', class_name='sin') }}">Assassin</a>
+            </div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name barb icon sharperGlow">
+                <a href="{{ url_for('feat', class_name='barb') }}">Barbarian</a>
+            </div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name rgr icon sharperGlow">
+                <a href="{{ url_for('feat', class_name='rgr') }}">Ranger</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="class-group">
+            <div class="group-name soins-head inset">Mage</div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name necro icon sharperGlow">
+                 <a href="{{ url_for('feat', class_name='necro') }}">Necromancer</a>
+            </div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name demo icon sharperGlow">
+                <a href="{{ url_for('feat', class_name='demo') }}">Demonologist</a>
+            </div>
+            <div class="class-space">&nbsp;</div>
+            <div class="class-name hox icon sharperGlow">
+                <a href="{{ url_for('feat', class_name='hox') }}">Herald of Xotli</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+require(["dojo/query","dojo/NodeList-dom","dojo/domReady!"],function(o){o(".class-name").on("click",function(){window.location.href=o("a",this).attr("href")[0]})})
+</script>
+{% endblock %}
+

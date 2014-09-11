@@ -1,0 +1,126 @@
+@font-face {
+	font-family: 'icons';
+	src:url('fonts/icons.eot');
+	src:url('fonts/icons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icons.woff') format('woff'),
+		url('fonts/icons.ttf') format('truetype'),
+		url('fonts/icons.svg#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="ico-"] {
+*/
+.ico-list, .ico-pencil, .ico-home, .ico-unlocked, .ico-lock, .ico-thumbs-up, .ico-thumbs-up-2, .ico-star, .ico-star-2, .ico-cancel-circle, .ico-checkmark-circle, .ico-info, .ico-remove, .ico-link, .ico-cog, .ico-cogs, .ico-paypal, .ico-checkbox-checked, .ico-checkbox-unchecked, .ico-checkbox-partial, .ico-radio-checked, .ico-radio-unchecked, .ico-file, .ico-fire, .ico-plus, .ico-minus, .ico-twitter, .ico-facebook, .ico-tux {
+	font-family: 'icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.ico-list:before {
+	content: "\21";
+}
+.ico-pencil:before {
+	content: "\22";
+}
+.ico-home:before {
+	content: "\23";
+}
+.ico-unlocked:before {
+	content: "\24";
+}
+.ico-lock:before {
+	content: "\25";
+}
+.ico-thumbs-up:before {
+	content: "\26";
+}
+.ico-thumbs-up-2:before {
+	content: "\27";
+}
+.ico-star:before {
+	content: "\28";
+}
+.ico-star-2:before {
+	content: "\29";
+}
+.ico-cancel-circle:before {
+	content: "\2a";
+}
+.ico-checkmark-circle:before {
+	content: "\2b";
+}
+.ico-info:before {
+	content: "\2c";
+}
+.ico-remove:before {
+	content: "\2d";
+}
+.ico-link:before {
+	content: "\2e";
+}
+.ico-cog:before {
+	content: "\2f";
+}
+.ico-cogs:before {
+	content: "\30";
+}
+.ico-paypal:before {
+	content: "\31";
+}
+.ico-checkbox-checked:before {
+	content: "\32";
+}
+.ico-checkbox-unchecked:before {
+	content: "\33";
+}
+.ico-checkbox-partial:before {
+	content: "\34";
+}
+.ico-radio-checked:before {
+	content: "\35";
+}
+.ico-radio-unchecked:before {
+	content: "\36";
+}
+.ico-file:before {
+	content: "\37";
+}
+.ico-fire:before {
+	content: "\38";
+}
+.ico-plus:before {
+	content: "\39";
+}
+.ico-minus:before {
+	content: "\3a";
+}
+.ico-twitter:before {
+	content: "\3b";
+}
+.ico-facebook:before {
+	content: "\3c";
+}
+.ico-tux:before {
+	content: "\3d";
+}
