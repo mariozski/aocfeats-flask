@@ -6,7 +6,8 @@ import shelve
 import requests
 
 app = Flask(__name__)
-app.debug = True
+# disable or enable debug mode for Flask
+#app.debug = True
 assets = Environment(app)
 assets.url = app.static_url_path
 scss = Bundle(r'css\fonts.scss',
@@ -15,7 +16,10 @@ scss = Bundle(r'css\fonts.scss',
               r'css\toggle-switch.scss',
               filters='pyscss',
               output='all.css')
-SHELVE_DB = r'C:\Users\Mariusz\PycharmProjects\aocfeats\shorturl' if app.debug else r''
+
+# path to shelve database, it's used to store cached responses from is.gd to not query
+# it too much.
+SHELVE_DB = r'C:\Users\Mariusz\PycharmProjects\aocfeats\shorturl' if app.debug else r'some_other_location'
 
 assets.register('stylesheets', scss)
 
@@ -35,6 +39,7 @@ def feat(class_name):
     if not class_name in map(lambda key: allowed_classes[key], allowed_classes):
         return index()
 
+    # TODO: add handling of flash messages
     message = ""
     return render_template('feats.html', flash_message=message)
 
@@ -77,7 +82,7 @@ def shorten():
 def import_build(key):
     char_key = key[:3]
     if char_key not in allowed_classes:
-        return 'Could not import specified spec.'
+        return 'Could not import specified specialization.'
 
     return redirect(url_for('feat_with_key', class_name=allowed_classes[char_key], key=key))
 
