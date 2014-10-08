@@ -251,10 +251,10 @@ return function() {
             ],
             "Improves the Storm Nimbus invocation by increasing the magnitude of the team's critical hits, in addition to increasing the armor and spell penetration effect.")),
     new Feat(234400, 2, 8, 5, 23, 5, [7,5],
-        new FeatDescription('Spell - Brain Spasms',
+        new FeatDescription('Spell - Slip Free',
             [
             ],
-            "Grants a spell that, when active, offers the priest a significant chance of immediately recovering from stun, silence, or fear effects. Once recovered, the priest's mind is fixed on battle, enabling the tempest to inflict additional damage with spells and reducing the amount of energy spent when sprinting.<br/><br/>Investing feat points increases the chance of recovering by 20% per rank in addition to increasing the spell damage bonus granted when recovering.")),
+            "Grants a spell that, when active, attempts to catch a snare or root for 12s. If a snare or root is caught, it is negated and the Tempest gains damage deflection and increased spell damage for 15s.")),
     new Feat(232900, 2, 9, 2, 19, 1, [8,2],
         new FeatDescription('Spell - Cyclone of Set',
             [
@@ -264,7 +264,7 @@ return function() {
         new FeatDescription('Spell - Puppets of Set',
             [
             ],
-            "Grants a ground target area spell that enables the priest to stun and damage up to 6 enemies. Making them confused and unable to take any action, while also affecting them with lingering Lightning Arc damage."))
+            "Grants a ground target area spell that enables the priest to fear and damage up to 6 enemies. Making them confused and unable to take any action, while also affecting them with lingering Lightning Arc damage."))
 ]}};
 
     });

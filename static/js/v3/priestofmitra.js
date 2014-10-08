@@ -26,11 +26,8 @@ return {
         // 3
         new Feat(190100, 1, 3, 2, 1, 5, [2, 2],
             new FeatDescription('Divine Lance',
-                [
-                    {s: [20, 40, 60, 80, 100], suf: '%', t: "Mana Cost on Lance of Mitra"},
-                    {s: [0, 100, 200, 300, 400], suf: '%', t: "Increase to damage or healing on Divine Lance"}
-                ],
-                "Augments the Lance of Mitra prayer by healing all friendly targets in close proximity to enemies damaged by this divine spell. It also increases the mana cost of the Lance of Mitra prayer.")),
+                [],
+                "Augments the Lance of Mitra prayer by healing all friendly targets in close proximity to enemies damaged by this divine spell. Investing further feat points increases the healing and number of targets healed.")),
         // 4
         new Feat(191500, 1, 3, 4, 4, 1, null,
             new FeatDescription('Spell - Clarity of Mind',
@@ -258,9 +255,9 @@ return {
         new Feat(194200, 2, 6, 1, 39, 2, [6, 2],
             new FeatDescription('Empowered Hand of Mitra',
                 [
-                    {s: [-50, -100], suf: '%', t: 'Decrease casting time on Hand of Mitra'}
+                    {s: [1,2], suf: 's', t: 'Duration on Hand of Mitra'}
                 ],
-                "Decreases the casting time and reduces the Magic Damage penalty on the Hand of Mitra prayer.")),
+                "Increases duration on the Hand of Mitra spell.")),
 
         // 40
         new Feat(194100, 2, 6, 2, 40, 3, null,
